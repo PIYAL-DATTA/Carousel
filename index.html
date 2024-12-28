@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Page</title>
+    <link rel="stylesheet" href="my-styles.css">
+    <script src="my-script.js"></script>
+      <!-- Google Font -->
+  <!-- Plafair -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+  <!-- Trirong -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+    <div class="carousel-container">
+        <button class="arrow left">&#8249;</button>
+        <div class="carousel" id="carousel">
+            <div class="card">
+                <img src="photos/book1.jpg" alt="Image 1"  onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                <div class="text">
+                    <div class="title playfair">Way of the Wolf</div>
+                    <div class="content">Jordan Belfort—immortalized by Leonardo DiCaprio in the hit movie The Wolf of Wall
+                        Street—reveals the step-by-step sales and persuasion system proven to turn anyone into a
+                        sales-closing, money-earning rock star.</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="photos/book2.jpg" alt="Image 2" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                <div class="title playfair">Basic Economics</div>
+                <div class="content">Basic Economics is a citizen's guide to economics, written for those who want to
+                    understand how the economy works but have no interest in jargon or equations. Bestselling economist
+                    Thomas Sowell explains the general principles underlying different economic systems: capitalist,
+                    socialist, feudal, and so on. In readable language, he shows how to critique economic policies in
+                    terms of the incentives they create, rather than the goals they proclaim. With clear explanations of
+                    the entire field, from rent control and the rise and fall of businesses to the international balance
+                    of payments, this is the first book for anyone who wishes to understand how the economy functions.
+                </div>
+            </div>
+            <div class="card">
+                <img src="photos/book3.jpg" alt="Image 3"  onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                <div class="title playfair">Getting to Yes: Negotiating Agreement Without Giving In</div>
+                <div class="content">Since its original publication nearly thirty years ago, Getting to Yes has helped
+                    millions of people learn a better way to negotiate. One of the primary business texts of the modern
+                    era, it is based on the work of the Harvard Negotiation Project, a group that deals with all levels
+                    of negotiation and conflict resolution.</div>
+            </div>
+            <div class="card">
+                <img src="photos/book4.jpg" alt="Image 4"  onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                <div class="title playfair">Economics in One Lesson: The Shortest and Surest Way to Understand Basic Economics
+                </div>
+                <div class="content">A million copy seller, Henry Hazlitt’s classic primer is an essential guide to the
+                    basics of economic theory. A fundamental influence on modern libertarianism, Hazlitt defends
+                    capitalism and the free market from economic myths that persist to this day.</div>
+            </div>
+            <div class="card">
+                <img src="photos/book5.jpg" alt="Image 5"  onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                <div class="title playfair">Foster</div>
+                <div class="content">An international bestseller and one of The Times’ “Top 50 Novels Published in the
+                    21st Century,” Claire Keegan’s piercing contemporary classic Foster is a heartbreaking story of
+                    childhood, loss, and love; now released as a standalone book for the first time ever in the US.
+                </div>
+            </div>
+            <div class="card">
+                <img src="photos/book6.jpg" alt="Image 6"  onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                <div class="title playfair">Small Things Like These</div>
+                <div class="content">Small Things Like These is award-winning author Claire Keegan's landmark new novel,
+                    a tale of one man's courage and a remarkable portrait of love and family</div>
+            </div>
+            <div class="card">
+                <img src="photos/book7.jpg" alt="Image 7"  onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+                <div class="title playfair">So Late in the Day: Stories of Women and Men</div>
+                <div class="content">From Booker Prize Finalist and bestselling author of “pitch perfect” (Boston Globe)
+                    Small Things Like These, comes a triptych of stories about love, lust, betrayal, and the
+                    ever-intriguing interchanges between women and men.</div>
+            </div>
+        </div>
+        <script>
+            function bigImg(x) {
+                x.style.height = "60%";
+                x.style.transition = 'height 1s';
+            }
+
+            function normalImg(x) {
+                x.style.height = "50%";
+                x.style.transition = 'height 1s';
+            }
+        </script>
+        <button class="arrow right">&#8250;</button>
+        <div class="radiobutton">
+            <input type="radio" id="radio1" value="1">
+            <label class="dots" id="lbl1"></label>
+            <input type="radio" id="radio2" value="2">
+            <label class="dots" id="lbl2"></label>
+            <input type="radio" id="radio3" value="3">
+            <label class="dots" id="lbl3"></label>
+            <input type="radio" id="radio4" value="4">
+            <label class="dots" id="lbl4"></label>
+            <input type="radio" id="radio5" value="5">
+            <label class="dots" id="lbl5"></label>
+            <input type="radio" id="radio6" value="6">
+            <label class="dots" id="lbl6"></label>
+            <input type="radio" id="radio7" value="7">
+            <label class="dots" id="lbl7"></label>
+        </div>
+    </div>
+</body>
+
+</html>

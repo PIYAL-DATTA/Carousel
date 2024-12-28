@@ -1,0 +1,170 @@
+.atext {
+    background-color: aqua;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+/* Playfair Display Font */
+.playfair {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+  } 
+  /* trirong Font */
+  .trirong {
+      font-family: "Trirong", serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+/* Container area */
+.carousel-container {
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+    flex: 0 0 calc(100% / 5); /* Default to 5 visible cards */
+    box-sizing: border-box;
+    padding: 10px;
+}
+/* card img */
+.card img {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* card title */
+.card .title {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    margin: 10px 0 5px;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+}
+/* card content or text */
+.card .content {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #555;
+    text-align: justify;
+}
+/* both arrow design */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+/* left arrow */
+.arrow.left {
+    left: 10px;
+}
+/* right arrow */
+.arrow.right {
+    right: 10px;
+}
+/* pagination indicator */
+.radiobutton{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.radiobutton input{
+    display: none;
+}
+/* pagination indicator dot display */
+.radiobutton label{
+    width: 15px;
+    height: 15px;
+    background: #000000;
+    border-radius: 50%;
+    opacity: 0.3;
+    margin: 0 10px;
+}
+/* pagination indicator active display */
+#radio1:checked ~ #lbl1,
+#radio2:checked ~ #lbl2,
+#radio3:checked ~ #lbl3,
+#radio4:checked ~ #lbl4,
+#radio5:checked ~ #lbl5,
+#radio6:checked ~ #lbl6,
+#radio7:checked ~ #lbl7
+{
+    width: 25px;
+    height: 10px;
+    background: #000000;
+    border-radius: 10px;
+    opacity: 0.5;
+    transition: width 0.1s
+}
+
+@media (max-width: 1500px) {
+    .card {
+        flex: 0 0 calc(100% / 4); /* 4 visible cards on smaller screens */
+    }
+}
+
+@media (max-width: 1200px) {
+    .card {
+        flex: 0 0 calc(100% / 3); /* 3 visible cards on smaller screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .card {
+        flex: 0 0 calc(100% / 2); /* 2 visible cards on smaller screens */
+    }
+}
+
+@media (max-width: 550px) {
+    .card {
+        flex: 0 0 100%; /* 1 visible card on very small screens */
+    }
+    .card .title {
+        font-size: 12px;
+        height: 50px;
+    }
+    .card .content {
+        font-size: 10px;
+    }
+    /* Disable pagination indicator at small devices */
+    .radiobutton {
+        display: none;
+    }
+}
